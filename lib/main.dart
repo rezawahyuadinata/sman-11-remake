@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sman11/landingpage.dart';
+import 'package:sman11/layout.dart';
 
 void main() => runApp(SmanSebelas());
 
@@ -8,11 +10,11 @@ class SmanSebelas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello semuanya'),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => ResponsiveLayouts(),
+      },
     );
   }
 }
