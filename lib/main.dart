@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sman11/landingpage.dart';
-import 'package:sman11/layout.dart';
 
 void main() => runApp(SmanSebelas());
 
