@@ -8,29 +8,55 @@ class DesktopHomePageBody extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget motoSekolah() {
       return Container(
-        height: 100 /* MediaQuery.of(context).size.height */,
+        height: MediaQuery.of(context).size.height,
         width: double.infinity,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/2.jpg'),
-            fit: BoxFit.cover,
+            image: AssetImage('assets/images/banner.jpg'),
+            fit: BoxFit.fill,
           ),
         ),
-        child: Container(child: Text('hello')),
+        child: Container(
+          padding: EdgeInsets.all(100),
+          color: Color.fromRGBO(0, 0, 0, 0.7),
+          child: Center(
+            child: Text(
+              'Mewujudkan penyelenggaraan pendidikan bermutu, yang mampu bersaing global melalui penanaman karakter profil pelajar pancasila',
+              style: primaryTextStyle.copyWith(
+                fontSize: 48,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ),
       );
     }
 
     Widget beritaSekolah() {
       return Container(
-        color: primaryButtonColor,
+        color: Colors.black /* primaryHeadlineColor */,
         width: double.infinity,
         height: MediaQuery.of(context).size.height,
+        child: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.all(marginUtama),
+              child: Center(
+                child: Text(
+                  'Berita',
+                  style: primaryTextStyle.copyWith(
+                      fontSize: 32, fontWeight: medium),
+                ),
+              ),
+            ),
+          ],
+        ),
       );
     }
 
     Widget profilSekolah() {
       return Container(
-        color: primaryMainColor,
+        color: primaryHeadlineColor,
         width: double.infinity,
         height: MediaQuery.of(context).size.height,
       );
@@ -52,8 +78,8 @@ class DesktopHomePageBody extends StatelessWidget {
       return Column(
         children: [
           motoSekolah(),
-          profilSekolah(),
           beritaSekolah(),
+          profilSekolah(),
           daftarBeritaSekolah(),
           footerSekolah()
         ],

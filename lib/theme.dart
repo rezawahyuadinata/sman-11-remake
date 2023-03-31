@@ -29,12 +29,13 @@ const Color secondaryTertiaryColor = Color(0xffeebbc3);
 
 // Text Color
 const Color textMainColor = Color.fromARGB(255, 255, 255, 255);
+const Color textblackColor = Color.fromARGB(0, 0, 0, 0);
 
 TextStyle primaryTextStyle = GoogleFonts.merriweather(
   color: textMainColor,
 );
 TextStyle secondaryTextStyle = GoogleFonts.merriweather(
-  color: secondarySubHeadlineColor,
+  color: textblackColor,
 );
 
 TextStyle mainTextStyle = GoogleFonts.merriweather(
