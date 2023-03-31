@@ -16,7 +16,7 @@ class _ResponsiveLayoutsState extends State<ResponsiveLayouts> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(100),
+        preferredSize: Size.fromHeight(56),
         child: LayoutPageHeader(
           desktopHead: DesktopHomePageHeader(),
           mobileHead: DesktopHomePageHeader(),

@@ -8,13 +8,15 @@ class DesktopHomePageBody extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget motoSekolah() {
       return Container(
-        height: 200,
-        width: 200,
+        height: 100 /* MediaQuery.of(context).size.height */,
+        width: double.infinity,
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/1.jpg'),
+            image: AssetImage('assets/images/2.jpg'),
+            fit: BoxFit.cover,
           ),
         ),
+        child: Container(child: Text('hello')),
       );
     }
 
